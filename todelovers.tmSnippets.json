@@ -1,0 +1,38 @@
+{
+  "strings": {
+    "prefix": "str",
+    "body": "string#",
+    "description": "Define type string"
+  },
+  "bool": {
+    "prefix": "bool",
+    "body": "bool#",
+    "description": "Define boolean string"
+  },
+  "nanndo-talk": {
+    "prefix": "ntalk",
+    "body": "(nanndo-talk $0)",
+    "description": "Print console"
+  },
+  "type": {
+    "prefix":"type",
+    "body": [
+      "(type[$1]",
+      "    (public",
+      "        string#$0",
+      "    )",
+      ")"
+    ],
+    "description":"Create type"
+  },
+  "dfunc": {
+    "prefix":"dfunc",
+    "body": [
+      "(def-func $1 ()",
+      "    $0",
+      ")"
+    ],
+    "description":"Create function"
+  }
+}
+  

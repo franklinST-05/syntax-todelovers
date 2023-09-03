@@ -1,0 +1,56 @@
+{
+  "name": "todelover",
+  "displayName": "new language todelover",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "./dist/extension.js",
+  "categories": [
+    "Programming Languages"
+  ],
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "todelovers",
+        "configuration": "./language-configuration.json",
+        "aliases": [
+          "todelovers"
+        ],
+        "extensions": [
+          "todelovers"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "todelovers",
+        "scopeName": "source.todelovers",
+        "path": "./todelovers.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "todelovers",
+        "path": "./todelovers.tmSnippets.json"
+      }
+    ]
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "build": "tsc -p ./",
+    "dev": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.34",
+		"@types/vscode": "^1.73.0",
+		"@typescript-eslint/eslint-plugin": "^5.42.0",
+		"@typescript-eslint/parser": "^5.42.0",
+		"eslint": "^8.26.0",
+		"typescript": "^5.1.3"
+  }
+}
