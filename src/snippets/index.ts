@@ -52,7 +52,7 @@ export const snippets: Snippet[] = [
 		detail: "Block:def-func",
 		doc: [
 			"Inserts a function block",
-			"```todelovers\n(def-func\n\t...\n)\n```"
+			"```todelovers\n(def-func hello()\n\t...\n)\n```"
 		],
 	},
 	{
