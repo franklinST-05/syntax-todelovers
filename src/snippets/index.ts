@@ -34,7 +34,7 @@ export const snippets: Snippet[] = [
 		detail: "Block:type",
 		doc: [
 			"Inserts a type block",
-			"```todelovers\n(type[example]\n\t(public\n\t\tstring#hello\n\t)\n)\n```"
+			"```todelovers\n(type[example]\n\t(public\n\t\tstring::hello\n\t)\n)\n```"
 		],
 	},
 	{

@@ -1,14 +1,4 @@
 {
-  "strings": {
-    "prefix": "str",
-    "body": "string#",
-    "description": "Define type string"
-  },
-  "bool": {
-    "prefix": "bool",
-    "body": "bool#",
-    "description": "Define boolean string"
-  },
   "nanndo-talk": {
     "prefix": "ntalk",
     "body": "(nanndo-talk $0)",
@@ -19,7 +9,7 @@
     "body": [
       "(type[$1]",
       "    (public",
-      "        string#$0",
+      "        string::$0",
       "    )",
       ")"
     ],

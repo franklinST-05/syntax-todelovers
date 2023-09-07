@@ -3,24 +3,21 @@
 	"name": "todelovers",
 	"scopeName": "source.todelovers",
 	"patterns": [
-		{
-			"include": "#expression"
-		}
+		{ "include": "#__define__" }
 	],
 	"repository": {
-		"expression": {
+		"__define__": {
 			"patterns": [
-				{ "include": "#global" },
-				{ "include": "#blocks" }
+				{ "include": "#strings" },
+				{ "include": "#numerics" },
+				{ "include": "#keywords" },
+				{ "include": "#variable" },
+				{ "include": "#methods" },
+				{ "include": "#block-function" },
+				{ "include": "#ret_variable" }
 			]
 		},
-		"global": {
-			"patterns": [
-				{ "include": "#__global__strings" },
-				{ "include": "#__global__numerics" }
-			]
-		},
-		"__global__strings": {
+		"strings": {
 			"begin": "\"",
 			"end": "\"",
 			"name": "string.quoted.double.todelovers",
@@ -30,52 +27,50 @@
 				}
 			]
 		},
-		"__global__numerics": {
+		"numerics": {
 			"match": "\\b[0-9]+\\b",
 			"name": "constant.numeric.todelovers"
 		},
-		"blocks": {
-			"begin": "\\(",
-			"end": "\\)",
-			"name": "entity.name.function.todelovers",
-			"patterns": [
-				{ "include": "#__global__numerics" },
-				{ "include": "#__global__strings" },
-				{ "include": "#__blocks__variables" },
-				{ "include": "#__blocks__keywords" },
-				{ "include": "#__blocks__methods" },
-				{ "include": "#__blocks__type" }
-			]
+		"keywords": {
+			"match": "\\b(tode-broadcast|def-todelovers|functions|main-frank|public|private)\\b",
+			"name": "keyword.todelovers"
 		},
-		"__blocks__variables": {
-			"match": "\\b(bool#|string#|number#)\\b([^\\s]*)\\b",
+		"variable": {
+			"match": "\\b(int|string)(::)\\b([a-zA-Z0-9]*)\\b",
 			"captures": {
 				"1": {
 					"name": "support.type.todelovers"
 				},
 				"2": {
+					"name": "support.type.todelovers"
+				},
+				"3": {
 					"name": "keyword.todelovers"
 				}
 			}
 		},
-		"__blocks__keywords": {
-			"match": "\\b(tode-broadcast|def-todelovers|functions|def-func|main-frank|public|private)\\b",
+		"ret_variable": {
+			"match": "(::)\\b(int|string)\\b",
 			"captures": {
 				"1": {
-					"name": "keyword.todelovers"
+					"name": "support.type.todelovers"
+				},
+				"2": {
+					"name": "support.type.todelovers"
 				}
 			}
 		},
-		"__blocks__methods": {
-			"match": "\\b(nando-talk|add)\\b(.[^\\)]*)",
+		"methods": {
+			"match": "\\b(nando-talk|add|set)\\b(.[^\\)]*)",
 			"captures": {
 				"1": {
 					"name": "keyword.control.todelovers"
 				},
 				"2": {
 					"patterns": [
-						{ "include": "#__global__strings" },
-						{ "include": "#__global__numerics" },
+						{ "include": "#strings" },
+						{ "include": "#numerics" },
+						{ "include": "#variable" },
 						{
 							"match": ".",
 							"name": "variable.parameter"
@@ -84,14 +79,14 @@
 				}
 			}
 		},
-		"__blocks__type": {
-			"match": "\\b(type)\\b([^\\s]*)",
+		"block-function": {
+			"match": "\\b(def-func)\\b\\b(.[^\\->]*)",
 			"captures": {
 				"1": {
-					"name": "entity.name.type.todelovers"
+					"name": "keyword.todelovers"
 				},
 				"2": {
-					"name": "variable.todelovers"
+					"name": "entity.name.function"
 				}
 			}
 		}
