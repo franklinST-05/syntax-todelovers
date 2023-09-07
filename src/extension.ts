@@ -3,7 +3,7 @@ import { snippets } from "./snippets";
 
 export function activate(context: vscode.ExtensionContext) {
 
-	const provider = vscode.languages.registerCompletionItemProvider("todelovers", {
+	const providerCompletions = vscode.languages.registerCompletionItemProvider("todelovers", {
 
 		provideCompletionItems(context: vscode.TextDocument) {
 			const completers = snippets.map((cm) => {
@@ -19,5 +19,5 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	});
 
-	context.subscriptions.push(provider);
+	context.subscriptions.push(providerCompletions);
 }
