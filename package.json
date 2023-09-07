@@ -1,13 +1,14 @@
 {
-  "name": "todelover",
-  "displayName": "new language todelover",
+  "name": "todelovers",
+  "displayName": "Todelovers",
+  "publisher": "The best language for todelovers",
   "version": "0.0.1",
   "license": "MIT",
   "main": "./dist/extension.js",
   "categories": [
     "Programming Languages"
   ],
-  "icon": "./src/assets/icon.png",
+  "icon": "src/assets/icon-dark.png",  
   "engines": {
     "vscode": "^1.81.0"
   },
@@ -20,8 +21,12 @@
           "todelovers"
         ],
         "extensions": [
-          "todelovers"
-        ]
+          "todelovers"  
+        ],
+        "icon": {
+          "dark": "src/assets/icon.svg",
+          "light": "src/assets/icon.svg"
+        }
       }
     ],
     "grammars": [
