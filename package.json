@@ -1,7 +1,8 @@
 {
   "name": "todelovers",
   "displayName": "Todelovers",
-  "publisher": "The best language for todelovers",
+  "publisher": "Todelovers",
+  "description": "The best language for todelovers",
   "version": "0.0.1",
   "license": "MIT",
   "main": "./dist/extension.js",
