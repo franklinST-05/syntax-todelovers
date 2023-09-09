@@ -48,11 +48,11 @@ export const snippets: Snippet[] = [
 	},
 	{
 		prefix: "def-func",
-		snippet: "(def-func ${1}()\n\t${0}\n\)",
+		snippet: "(def-func ${1} -> |>|\n\t\t${0}\n\t|<|\n\n\)",
 		detail: "Block:def-func",
 		doc: [
 			"Inserts a function block",
-			"```todelovers\n(def-func hello()\n\t...\n)\n```"
+			"```todelovers\n(def-func hello -> string::name \n\t...\n)\n```"
 		],
 	},
 	{
