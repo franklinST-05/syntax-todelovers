@@ -90,5 +90,14 @@ export const snippets: Snippet[] = [
 			"Inserts a add block",
 			"```todelovers\n(add 10 2)\n```"
 		],
+	},
+	{
+		prefix: "set-var",
+		snippet: "(set-var ${1} ${0})",
+		detail: "Block:add",
+		doc: [
+			"Inserts a set var block",
+			"```todelovers\n(set-var string::var \"Welcome\")\n```"
+		],
 	}
 ];

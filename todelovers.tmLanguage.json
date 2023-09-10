@@ -61,7 +61,7 @@
 			}
 		},
 		"methods": {
-			"match": "\\b(nando-talk|add|set)\\b(.[^\\)]*)",
+			"match": "\\b(nando-talk|add|set-var|get-var)\\b(.[^\\)]*)",
 			"captures": {
 				"1": {
 					"name": "keyword.control.todelovers"
@@ -71,6 +71,7 @@
 						{ "include": "#strings" },
 						{ "include": "#numerics" },
 						{ "include": "#variable" },
+						{ "include": "#methods" },
 						{
 							"match": ".",
 							"name": "variable.parameter"

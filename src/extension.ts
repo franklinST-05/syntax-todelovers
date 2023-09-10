@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 import { snippets } from "./snippets";
+import "./commands/run";
 
 export function activate(context: vscode.ExtensionContext) {
 
